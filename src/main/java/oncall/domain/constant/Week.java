@@ -16,8 +16,8 @@ public enum Week {
 
     public static Week from(String week) {
         return Arrays.stream(Week.values())
-                .filter(element -> element.name().equals(week))
+                .filter(element -> element.name.equals(week))
                 .findFirst()
-                .orElseThrow(() -> CustomException.from(ErrorMessage.INVALID_INPUT_ERROR));
+                .orElseThrow(() -> CustomException.from(ErrorMessage.INVALID_INPUT_WEEK_ERROR));
     }
 }

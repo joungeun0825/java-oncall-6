@@ -17,8 +17,8 @@ public enum Month {
 
     public static Month from(String month) {
         return Arrays.stream(Month.values())
-                .filter(element -> element.name().equals(month))
+                .filter(element -> element.name.equals(month))
                 .findFirst()
-                .orElseThrow(() -> CustomException.from(ErrorMessage.INVALID_INPUT_ERROR));
+                .orElseThrow(() -> CustomException.from(ErrorMessage.INVALID_INPUT_MONTH_ERROR));
     }
 }
